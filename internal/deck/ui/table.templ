@@ -1,0 +1,24 @@
+package ui
+
+templ Table(headers []string, rows [][]templ.Component) {
+    <table class="w-full text-sm border rounded-md">
+        <thead class="border-b bg-muted">
+            <tr>
+                for _, h := range headers {
+                    <th class="px-4 py-2 text-left font-medium">{ h }</th>
+                }
+            </tr>
+        </thead>
+
+        <tbody>
+            for _, row := range rows {
+                <tr class="border-b">
+                    for _, cell := range row {
+                        <td class="px-4 py-2">{ cell }</td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+

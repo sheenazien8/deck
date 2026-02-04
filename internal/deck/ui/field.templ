@@ -1,0 +1,18 @@
+package ui
+
+templ Field(
+    id string,
+    label string,
+    input templ.Component,
+    error string,
+) {
+    <div class="space-y-2">
+        { Label(id, label) }
+        { input }
+
+        if error != "" {
+            <p class="text-sm text-red-500">{ error }</p>
+        }
+    </div>
+}
+

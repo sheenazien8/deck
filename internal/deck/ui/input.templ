@@ -1,0 +1,19 @@
+package ui
+
+templ Input(
+    id string,
+    name string,
+    value string,
+    inputType string,
+    attrs map[string]string,
+) {
+    <input
+        id={ id }
+        name={ name }
+        type={ inputType }
+        value={ value }
+        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+        { spread(attrs) }
+    />
+}
+
