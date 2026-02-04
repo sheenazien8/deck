@@ -1,2 +1,2 @@
 # Deck
-This is the project for mimicing laravel-filament
+This is the project for mimicking laravel-filament
