@@ -1,0 +1,9 @@
+package ui
+
+templ List(items []string) {
+	<ul class="list-disc pl-6">
+		for _, item := range items {
+			<li>{ item }</li>
+		}
+	</ul>
+}

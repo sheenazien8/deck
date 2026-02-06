@@ -1,2 +1,27 @@
 package ui
 
+templ Alert(variant string, title string, message string) {
+	<div class={ alertClass(variant) }>
+		<div class="flex items-start gap-3">
+			<div class="flex-1">
+				if title != "" {
+					<h4 class="font-semibold mb-1">{ title }</h4>
+				}
+				<p class="text-sm">{ message }</p>
+			</div>
+		</div>
+	</div>
+}
+
+func alertClass(variant string) string {
+	switch variant {
+	case "error":
+		return "rounded-lg border border-red-200 bg-red-50 p-4"
+	case "warning":
+		return "rounded-lg border border-yellow-200 bg-yellow-50 p-4"
+	case "success":
+		return "rounded-lg border border-green-200 bg-green-50 p-4"
+	default:
+		return "rounded-lg border border-blue-200 bg-blue-50 p-4"
+	}
+}

@@ -4,14 +4,14 @@ templ Field(
     id string,
     label string,
     input templ.Component,
-    error string,
+    errorMsg string,
 ) {
     <div class="space-y-2">
-        { Label(id, label) }
-        { input }
+        @Label(id, label)
+        @input
 
-        if error != "" {
-            <p class="text-sm text-red-500">{ error }</p>
+        if errorMsg != "" {
+            <p class="text-sm text-red-500">{ errorMsg }</p>
         }
     </div>
 }
