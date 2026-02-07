@@ -1,0 +1,12 @@
+package ui
+
+import "fmt"
+
+templ EditButton(resource string, id uint) {
+    <a 
+        href={ templ.SafeURL("/" + resource + "/" + fmt.Sprint(id) + "/edit") }
+        class="px-3 py-1 text-sm text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded"
+    >
+        Edit
+    </a>
+}

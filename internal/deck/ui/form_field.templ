@@ -1,0 +1,8 @@
+package ui
+
+templ FormField(label string, field templ.Component) {
+    <div class="flex flex-col gap-2">
+        <label class="text-sm font-medium">{ label }</label>
+        @field
+    </div>
+}

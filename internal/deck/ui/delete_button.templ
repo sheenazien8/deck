@@ -1,0 +1,14 @@
+package ui
+
+import "fmt"
+
+templ DeleteButton(resource string, id uint) {
+    <form action={ templ.SafeURL("/" + resource + "/" + fmt.Sprint(id) + "/delete") } method="POST" style="display:inline;" onsubmit="return confirm('Are you sure?');">
+        <button 
+            type="submit"
+            class="px-3 py-1 text-sm text-red-600 hover:text-red-800 hover:bg-red-50 rounded border border-red-200"
+        >
+            Delete
+        </button>
+    </form>
+}

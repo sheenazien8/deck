@@ -1,0 +1,10 @@
+package ui
+
+templ CreateButton(resource string) {
+    <a 
+        href={ templ.SafeURL("/" + resource + "/create") }
+        class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+    >
+        Create New
+    </a>
+}

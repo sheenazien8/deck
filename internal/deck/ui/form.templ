@@ -1,0 +1,17 @@
+package ui
+
+templ Form(action string, method string, fields []templ.Component, submitLabel string, cancelUrl string) {
+    <form action={ templ.SafeURL(action) } method={ method } class="space-y-4">
+        for _, field := range fields {
+            @field
+        }
+        <div class="flex gap-2">
+            <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                { submitLabel }
+            </button>
+            <a href={ templ.SafeURL(cancelUrl) } class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">
+                Cancel
+            </a>
+        </div>
+    </form>
+}
